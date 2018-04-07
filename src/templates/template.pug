@@ -1,0 +1,20 @@
+block variables
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.9/css/all.css')
+        link(rel='stylesheet' href='assets/styles/app.min.css')
+        //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBeLTWUL0nvirEq_HgWep-97kPP5EXTRhM&callback=initMap' defer)
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCPU6pqrmnRz-clxSj_KIs0SwOcXWSjfQQ&callback=initMap' async defer)
+        script(src='assets/scripts/bundle.js' defer)
+
+    body
+        block content
+        //- include common/menu.pug

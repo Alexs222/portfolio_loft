@@ -1,0 +1,172 @@
+
+.main_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#autorization {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    z-index: 100;
+    background: none;
+    border-radius: 5%;
+    border: 1px solid $white;
+    @include roboto();
+    color: $white;
+    width: rem(185px);
+    height: rem(43px);
+    &:hover {
+        background: $white;
+        color: $green;
+        @include roboto(bold);
+        transition: 0.5s;
+    }
+}
+
+.main_user {
+    width: rem(380px);
+    // height: 0;
+    height: rem(400px);
+    // display: none;
+    background:rgba(252, 252, 252, 0.85);
+    z-index: 100;
+    border-radius: rem(5px);
+    padding-top: rem(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // & .active {
+    //     height: rem(400px);
+    // }
+    
+
+    
+    & .user__name,
+    .user__info {
+        color:$text-color;
+        text-align: center;
+    }
+    & .user__img {
+        margin-bottom: rem(10px);
+    }
+    & .user__name {
+        margin-bottom: rem(10px);
+    }
+
+    & .socials__list {
+        justify-content: center;
+        & .socials__item {
+            margin: 0 40px 0 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    & .socials__link {
+        opacity: .5;
+        transition: .3s;
+        &:hover {
+            opacity: 1;
+        }
+
+    & .socials__link-icon {
+        fill: $green;
+        }
+    }
+
+    & .menu-list {
+        display: flex;
+        text-align: center;
+        line-height: rem(48px);
+        border-radius: 0 0 rem(5px) rem(5px);
+        overflow: hidden;
+
+
+        & .menu__item {
+            background: $green;
+            &:hover {
+                background: #009688;
+                transition: 0.5s;
+            }
+            height: 48px;
+            &:nth-child(1) {
+                width: 42%;
+            }
+            &:nth-child(2) {
+                width: 33%;
+                border-left: 1px solid $white;
+                border-right: 1px solid $white;
+            }
+            &:nth-child(3) {
+                width: 25%;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
+
+            & .menu__link {
+                color: $white;
+                display: block;
+            }
+    }
+}
+
+.copir {
+    position: absolute;
+    @include roboto(light);
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, 0);
+    // text-align: center;
+    // margin: 0 auto;
+    color: $white;
+    z-index: 102;
+}
+
+
+/* ГОРИЗОНТАЛЬНЫЙ FLIP */
+
+.flip {
+    /* общие стили */
+    width: rem(380px); 
+    /* ширина блока с flip */
+    height: rem(400px);
+    /* высота блока с flip */
+    position: relative;
+    /* позиционируем для дочерних блоков */
+    transition: 1s;
+    /* скорость поворота */
+    transform-style: preserve-3d;
+}
+
+.flip.active {
+    transform: rotateY(180deg);
+}
+
+.front {
+    /* общие стили */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* скрываем контент, который отвернут от пользователя */
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* скрываем контент, который отвернут от пользователя */
+    transform: rotateY(180deg);
+    /* отворачиваем задний блок */
+}
+

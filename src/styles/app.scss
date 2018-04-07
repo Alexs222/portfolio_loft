@@ -1,0 +1,37 @@
+$white: #efeee9;
+$beige: #eeebdf;
+$green: #00bfa5;
+$dark-green: #009688;
+$text-color: #455a64;
+$grey: #373e42;
+$light-grey: #dfdcd5;
+
+// resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
+
+@import 'normalize.css';
+@import 'layout/fonts';
+@import 'layout/mixins';
+@import 'layout/media';
+@import 'layout/base';
+@import 'pages/about';
+@import 'common/menu';
+@import 'common/technologies';
+@import 'common/slider';
+@import 'common/_socials';
+@import 'common/_humburger';
+@import 'common/_user';
+@import 'common/_skils';
+@import 'common/_footer';
+@import 'common/_contacts';
+@import 'common/_fullscreen_menu';
+@import 'pages/index';
+@import 'common/autorization';
+@import 'common/arrow';
+@import 'pages/blog';
+@import 'pages/my-works';

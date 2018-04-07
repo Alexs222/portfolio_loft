@@ -1,0 +1,14 @@
+.arrow__link:hover .arrow__icon {
+    fill: $white;
+    transform: scale(1.2, 1.2);
+    transition: .3s;
+    
+}
+
+.arrow__icon {
+    fill: #b3cfd1;
+    width: rem(30px);
+    height: rem(30px);
+
+
+}

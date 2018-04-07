@@ -1,0 +1,153 @@
+extends ../template
+
+block variables
+    - var title = 'Обо мне'
+
+block content
+    .wrapper
+        .maincontent
+            section.section.hero
+                .socials
+                    include ../common/_socials
+                .hamburger
+                    a.hamburger__link.hero__menu(href="#")
+                        .hamburger__bars
+                .hero__fon
+                    svg.hero__icon
+                        use(xlink:href="assets/images/icons/sprite.svg#portfolio_header")
+                .user.hero-user
+                     include ../common/_user
+                .arrow-down.hero__scroll-btn
+                    include ../common/_arrow_down
+                .traingle
+                    svg.traingle-svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                        polygon.traingle-svg__left(points='0,0   0,86   500.8,86   500.8,75.5')
+                        polygon.traingle-svg__right(points='1000,0   1000,86   500,86   500,75.5')
+
+            section.section.about
+                .about__left
+                    .about__left-wrap
+                        .about__left-title
+                            .about__wrap-title
+                                .block__title.block__title_about Обо мне
+                                .fon__about__left
+                                    svg.fon__svg
+                                        use(xlink:href="assets/images/icons/sprite.svg#about_header")
+                        .about__left-content
+                            .about__left__wrap
+                                .cont__foto
+                                    img.about__foto(src="assets/images/about/avatar_new.jpg", alt="foto")
+                                .cont__title
+                                    .block__sub-title.cont_sub-poz Кто я
+                                .cont_text.text-content
+                                    p Я начинающий вебразработчик Калининграда. Мне 47 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как все классно и красиво! 
+                .about__right
+                    .about__right-wrap
+                        .block__sub-title.title__right чем я могу быть 
+                        .title__two вам полезен
+                        .text-content.text-content_about-right
+                            p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                        //- .texnologe Frontend
+                        .about__right-content
+                            ul.skills-list
+                                each item in ['Frontend', 'Backend', 'Workflow']
+                                    li.skills-list__item
+                                        .skills-row
+                                            case item
+                                                when 'Frontend'
+                                                    .skills-row__title #{item}
+                                                    ul.skills-row__list
+                                                        - 
+                                                            var skils = [
+                                                                ['Html5', 'circle-80'],
+                                                                ['css3', 'circle-60'],
+                                                                ['JavaScript & jQuery', 'circle-25']
+                                                            ]
+                                                        each item, index in skils
+                                                            li.skills-row__item
+                                                                .skill
+                                                                    svg.circles(viewbox='0 0 110 110')
+                                                                        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                                                                        circle.circle__second(class=`${item[1]}`)(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                                                                    .skill__title #{item[0]}
+                                                when 'Backend'
+                                                    .skills-row__title #{item}        
+                                                    ul.skills-row__list
+                                                        - 
+                                                            var skils = [
+                                                                ['PHP', 'circle-30'],
+                                                                ['mySQL', 'circle-20'],
+                                                                ['Node.js & npm', 'circle-45'],
+                                                                ['Mongo.db', 'circle-25']
+                                                            ]
+                                                        each item, index in skils
+                                                            li.skills-row__item
+                                                                .skill
+                                                                    svg.circles(viewbox='0 0 110 110')
+                                                                        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                                                                        circle.circle__second(class=`${item[1]}`)(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                                                                    .skill__title #{item[0]}
+                                                when 'Workflow'        
+                                                    .skills-row__title #{item}        
+                                                    ul.skills-row__list
+                                                        - 
+                                                            var skils = [
+                                                                ['Git', 'circle-70'],
+                                                                ['Gulp', 'circle-60'],
+                                                                ['Bover', 'circle-25']
+                                                            ]
+                                                        each item, index in skils
+                                                            li.skills-row__item
+                                                                .skill
+                                                                    svg.circles(viewbox='0 0 110 110')
+                                                                        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                                                                        circle.circle__second(class=`${item[1]}`)(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                                                                    .skill__title #{item[0]}
+                
+            section.section.map
+                #myGoogleMap.map-container
+                .map__contacts
+                    .contacts
+                        .contacts__title
+                            .block__sub-title контакты
+                        ul.contacts__list
+                            li.contacts__item
+                                a.contacts__link(href="skype:nikulin_alexander?call")
+                                    svg.contact-icon
+                                        use(xlink:href="assets/images/icons/sprite.svg#skype")
+                                    span.contacts__text nikulin_alexander
+                            li.contacts__item
+                                a.contacts__link(href="mailto:aleks_nikulin@mail.ru")
+                                    svg.contact-icon
+                                        use(xlink:href="assets/images/icons/sprite.svg#envelope")
+                                    span.contacts__text aleks_nikulin@mail.ru
+                            li.contacts__item
+                                a.contacts__link(href="skype:+79114766161?call")
+                                    svg.contact-icon
+                                        use(xlink:href="assets/images/icons/sprite.svg#phone")
+                                    span.contacts__text +7 911 476 61 61
+                            li.contacts__item
+                                a.contacts__link
+                                    svg.contact-icon
+                                        use(xlink:href="assets/images/icons/sprite.svg#map_marker")
+                                    span.contacts__text г.Калининград, ул. Пупкина, д. 100
+
+        footer.footer-container
+            include ../common/_footer
+        include ../common/_fullscreenmenu
+
+  
+                                                    //- - 
+                                                    //-     var skils = [
+                                                    //-         ['Html5', '.circle-50'],
+                                                    //-         ['css3', '.circle-40'],
+                                                    //-         ['JavaScript & jQuery', '.circle-25']
+                                                    //-     ]
+                                                        //- each item, index in skils
+
+
+                                                        //- each skill in ['Html5', 'css3', 'JavaScript & jQuery']
+
+
+    

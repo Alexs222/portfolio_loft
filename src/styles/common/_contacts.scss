@@ -1,0 +1,49 @@
+
+.map {
+    height: 100%;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.contacts {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(390px);
+    height: rem(290px);
+    background-color: #fcfcfc;
+    opacity: 0.85;
+    border-radius: rem(8px);
+    @include phones {
+        top: 30%;
+    }
+
+}
+
+ .contacts__title {
+     text-align: center;
+     padding-top: rem(25px);
+     padding-bottom: rem(25px);
+ }
+
+.contacts__list{
+    margin-left: rem(40px);
+}
+
+.contacts__item {
+    margin-bottom: rem(20px);
+}
+
+.contacts__link{
+    display: flex;
+}
+
+.contact-icon {
+    width: rem(25px);
+    height: rem(25px);
+    fill: $green;
+    margin-right: rem(10px);
+}

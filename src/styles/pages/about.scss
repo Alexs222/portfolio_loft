@@ -1,0 +1,266 @@
+// секция Hero
+.wrapper {
+    position: relative;
+}
+
+.hero {
+   background: url("./../images/mount_blog.png") center center no-repeat;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   text-align: center;
+}
+
+.socials {
+    position: absolute;
+    top: rem(30px);
+    left: rem(15px);
+    z-index: 100;
+}
+
+.hamburger {
+    position: absolute;
+    top: rem(40px);
+    right: rem(30px);
+    z-index: 100;
+}
+
+.hero__fon {
+    width: 100%;
+    height: 100%;
+}
+
+.hero__icon {
+    fill: $white;
+    opacity: 0.06;
+    width: 90%;
+    height: 90%;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 130;
+}
+
+.traingle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.traingle-svg {
+    display: block;
+}
+
+.traingle-svg__left {
+    fill: $white;
+}
+
+.traingle-svg__right {
+    fill: $beige;
+}
+
+// Секция About
+
+.about {
+    display: flex;
+    height: 100%;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+// Левая часть
+
+.about__left {
+    width: 50%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: rem(80px);
+    }
+
+
+}
+    
+
+.about__left-wrap {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    @include desktop {
+        flex-direction: column;
+        width: 80%;
+    }
+    @include tablets {
+        flex-direction: column;
+        width: 70%;
+    }
+}
+
+.about__left-title {
+    @include desktop {
+        width: 100%;
+        margin-bottom: rem(60px);
+    }
+    @include tablets {
+        padding-top: 40px;
+    }
+
+}
+
+.about__left-content {
+    width: 50%;
+    @include desktop {
+        width: 100%;
+    }
+}
+
+.block__title_about {
+    margin: 0;
+    text-align: center;
+    line-height: 0.8;
+    @include tablets {
+        font-size: rem(49px);
+    }
+    @include phones {
+        font-size: rem(35px);
+    }
+}
+
+.about__wrap-title {
+    position: relative;
+
+} 
+
+.fon__about__left {
+    position: absolute;
+    top: rem(17px);
+    left: 50%;
+    transform: translate(-50%, -50%)
+
+}
+
+.fon__svg {
+    fill: #6d7070;
+    opacity: 0.07;
+}
+
+.about__left__content {
+    width: 50%;
+}
+
+.about__left__wrap {
+    width: 98%; 
+    height: 100%;
+}
+
+ .cont__foto {
+    margin-bottom: rem(18px);
+}
+
+.about__foto {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.cont__title {
+    text-align: center;
+}
+
+.cont_sub-poz {
+    margin-bottom: rem(18px);
+    @include tablets {
+        font-size: rem(30px);
+    }
+
+    @include phones {
+        font-size: rem(21px);
+    }
+
+}
+
+// Правая часть
+
+.about__right {
+    width: 50%;
+    background-color: $beige;
+    padding-bottom: rem(60px);
+    
+    @include tablets {
+        width: 100%;
+        padding-bottom: rem(60px);
+        padding-top: rem(40px);
+        
+    }
+}
+
+
+.about__right-wrap {
+    width: 90%;
+    margin: auto;
+    @include tablets {
+        width: 70%;
+    }
+
+}
+
+.title__right{
+    margin: 0;
+    text-align: center;
+    line-height: 0.8;
+    @include tablets {
+        font-size: rem(30px);
+    }
+    @include phones {
+        font-size: rem(21px);
+    }
+}
+    
+
+.title__two {
+    @include bernier;
+    font-size: rem(35px);
+    text-align: center;
+    margin-bottom: rem(30px);
+    @include tablets {
+        font-size: rem(30px);
+    }
+    @include phones {
+        font-size: rem(21px);
+    }
+
+}
+
+.text-content_about-right {
+    margin-bottom: rem(50px);
+}
+
+// .about__right-content {
+//     @include tablets {
+//         text-align: center;
+//     }
+
+// }
+
+.map {
+    position: relative;
+}
+
+#myGoogleMap {
+    width: 100%;
+    height: 100%;
+}

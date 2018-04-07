@@ -1,0 +1,45 @@
+- 
+    var pages = [
+        ['Мои работы', '/my-works.html'],
+        ['Обо мне', '/about.html'],
+        ['Блог', '/blog.html'],
+        ['Авторизация', '/index.html']
+    ]
+
+
+
+.fullscreenmenu
+    #fullscreenmenu.fullscreenmenu-container
+        .fullscreenmenu-left
+        .fullscreenmenu-right
+        .fullscreen-header
+            a.fullscreen__btn(href='#') &times
+        .fullscreen__wrap
+            ul.fullscreen__list
+                each page, index in pages
+                    li.fullscreen__item
+                        a.fullscreen__link(href=`${page[1]}`)
+                            .block__title.block__title_fullscreen #{page[0]}
+    //- .fullscreen-section
+    //-     .fullscreenmenu-left
+    //-     .fullscreenmenu-right
+
+//- .fullscreenmenu
+//-     #fullscreenmenu.fullscreenmenu-container
+//-         .fullscreen-header
+//-             a.fullscreen__btn(href='#')
+//-                 img.fullscreen__img(src='assets/images/menu_close.png', alt='Close button')    
+//-         .fullscreen__wrap
+//-             ul.fullscreen__list
+//-                 li.fullscreen__item
+//-                     a.fullscreen__link(href="/my-works.html")
+//-                         .block__sub-title.block__sub-title_fullscreen Мои работы
+//-                 li.fullscreen__item
+//-                     a.fullscreen__link(href="/about.html")
+//-                         .block__sub-title.block__sub-title_fullscreen Обо мне
+//-                 li.fullscreen__item
+//-                     a.fullscreen__link(href="/blog.html")
+//-                         .block__sub-title.block__sub-title_fullscreen Блог
+//-                 li.fullscreen__item
+//-                     a.fullscreen__link(href="/index.html")
+//-                         .block__sub-title.block__sub-title_fullscreen Авторизация

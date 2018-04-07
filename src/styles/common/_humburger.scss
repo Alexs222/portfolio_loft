@@ -1,0 +1,27 @@
+.hamburger__link {
+    position: relative;
+    display: block;
+}
+
+.hamburger__bars {
+    &,
+    &:before,
+    &:after {
+        background: $white;
+        width: rem(40px);
+        height: rem(7px);
+        border-radius: rem(3px);
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+    &:before {
+        top: 15px;
+    }
+    &:after {
+        bottom: 15px;
+    }
+}

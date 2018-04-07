@@ -1,0 +1,184 @@
+body, html {
+  height: 100%;
+  
+}
+
+body {
+  font-size: 16px;
+  @include tablets {
+    font-size: rem(14px);
+  }
+  @include phones {
+    font-size: rem(14px);
+  }
+  line-height: 1.42;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include roboto();
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.section {
+  min-height: 650px;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    @include roboto();
+    color: $text-color;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button[type="button"] {
+  cursor: pointer;
+}
+
+.text-block {
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+  .visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .block__title {
+    @include bernier;
+    font-size: rem(63px);
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $grey;
+        opacity: 0.2;
+        width: rem(20px);
+        height: 5px;
+        margin-right: rem(20px);
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $grey;
+        opacity: 0.2;
+        width: rem(20px);
+        height: 5px;
+        margin-left: rem(20px);
+      }
+  }
+
+  .block__sub-title {
+    @include bernier;
+    font-size: rem(35px);
+    color: $grey;
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      background-color: $grey;
+      opacity: 0.2;
+      width: rem(20px);
+      height: 5px;
+      margin-right: rem(20px);
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      background-color: $grey;
+      opacity: 0.2;
+      width: rem(20px);
+      height: 5px;
+      margin-left: rem(20px);
+    }
+  }
+
+  .title-main {
+    @include bernier;
+    font-size: rem(63px);
+    letter-spacing: rem(3px);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 rem(20px);
+    line-height: 1.05;
+    color: $grey;
+    @include tablets {
+      font-size: rem(49px);
+    }
+    @include phones {
+      font-size: rem(35px);
+    }
+  }
+
+  .title-sub-main {
+    @include bernier;
+    font-size: rem(35px);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 rem(20px);
+    line-height: 1.05;
+    color: $grey;
+  }
+
+
+  .text-content p {
+    margin-bottom: rem(10px);
+  }
+
+.user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svg-dash {
+  width: rem(20px);
+  height: rem(5px);
+  opacity: 0.25;
+  fill: $grey;
+  stroke: $grey;
+  display: inline-block;
+  vertical-align: middle;
+}

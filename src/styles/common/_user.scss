@@ -1,0 +1,28 @@
+.user__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.user__img {
+    width: rem(140px);
+    height: rem(140px);
+    @include cover;
+    border-radius: 50%;
+    margin-bottom: rem(30px);
+}
+
+.user__name {
+    @include roboto ();
+    font-size: rem(35px);
+    color: $white;
+    margin-bottom: rem(16px);
+
+}
+
+.user__info {
+     @include roboto ();
+     font-size: rem(16px);
+     color: #bcd3d7;
+}
