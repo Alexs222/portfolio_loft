@@ -1,14 +1,16 @@
 import fullScreen from './common/_fullscreen_menu'
 import autorization from './common/_autorization';
+import swipe from './common/_swipe';
 // import test from './common/test';
 
 console.log('in index.js');
 
 // авторизация
 window.onload = function () {
-    console.log( "страница загружена")
-    autorization()
-    fullScreen()
+    console.log( "страница загружена");
+    autorization();
+    fullScreen();
+    swipe();
   }
 // test('Привет webpack');
 // autorization();
