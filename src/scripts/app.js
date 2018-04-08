@@ -1,6 +1,8 @@
-import fullScreen from './common/_fullscreen_menu'
+import fullScreen from './common/_fullscreen_menu';
 import autorization from './common/_autorization';
+import skilsAnimate from './common/_skils';
 import swipe from './common/_swipe';
+
 // import test from './common/test';
 
 console.log('in index.js');
@@ -10,6 +12,7 @@ window.onload = function () {
     console.log( "страница загружена");
     autorization();
     fullScreen();
+    skilsAnimate();
     swipe();
   }
 // test('Привет webpack');
