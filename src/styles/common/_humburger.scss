@@ -1,6 +1,13 @@
 .hamburger__link {
     position: relative;
     display: block;
+    width: 45px;
+    height: 53px;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        transition: .5s;
+    }
 }
 
 .hamburger__bars {

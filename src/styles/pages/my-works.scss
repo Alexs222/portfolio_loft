@@ -270,11 +270,14 @@
     width: rem(45px);
     height: rem(30px);
     fill: $white;
-    opacity: .7;
+    opacity: .6;
     transition: opasity .3s;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16);
-
-
+    &:hover {
+        opacity: 1;
+        transition: .5s;
+        transform: scale(1.2, 1.2);
+    }
 }
 
 .feedback {
