@@ -2,19 +2,23 @@ import fullScreen from './common/_fullscreen_menu';
 import autorization from './common/_autorization';
 import skilsAnimate from './common/_skils';
 import swipe from './common/_swipe';
+import preloader from './common/_preloader';
 
 // import test from './common/test';
 
-console.log('in index.js');
 
+
+
+console.log('in index.js');
+preloader();
 // авторизация
-window.onload = function () {
+// window.onload = function () {
     console.log( "страница загружена");
     autorization();
     fullScreen();
     skilsAnimate();
     swipe();
-  }
+  // }
 // test('Привет webpack');
 // autorization();
 // var autorjs = autorization()
