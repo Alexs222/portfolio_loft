@@ -7,33 +7,8 @@ block content
     .wrapper
         .maincontent
             section.section.hero.blog-section
-                .socials
-                    include ../common/_socials
-                .hamburger
-                    a.hamburger__link.hero__menu(href="#")
-                        .hamburger__bars
-                .user.blog-user
-                    ul.blog__list
-                        li.blog__item.blog__item_img
-                        li.blog__item.blog__item_img
-                            .user__img(style='background-image:url(assets/images/about/avatar.jpg)')
-                                img.visuallyhidden(src='assets/images/about/avatar.jpg', alt='один')
-                        li.blog__itemblog__discription
-                            .blog__name 
-                                .block__title Блог
-                                svg.blog__icon
-                                    use(xlink:href="assets/images/icons/sprite.svg#blog_header")
-
-                            .user__info 
-                                span Статьи, которые я написал
-
-
-                .traingle
-                    svg.traingle-svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
-                        polygon.traingle-svg__left.traingle-svg__blog(points='0,0   0,86   500.8,86   500.8,75.5')
-                        polygon.traingle-svg__right.traingle-svg__blog(points='1000,0   1000,86   500,86   500,75.5')
+                include ../common/_header_blog
             section.section.blog
-                
                 sidebar.blog__left
                     ul.blog__title
                         li.blog-title__item.active(data-scroll-to="sass")
@@ -44,7 +19,6 @@ block content
                             a.blog-title__link(href="#") Самый необходимый набор Gulp плагинов
                         li.blog-title__item(data-scroll-to="pug")
                             a.blog-title__link(href="#") Почему я выбрав Jade
-
                 main.blog__right
                     ul.blog__article
                             li.blog-article__item

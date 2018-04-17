@@ -3,9 +3,10 @@ import autorization from './common/_autorization';
 import skilsAnimate from './common/_skils';
 import swipe from './common/_swipe';
 import preloader from './common/_preloader';
+import parallaxMouse from './common/_parallax_mouse';
+import parallaxScroll from './common/_parallax_scroll';
 
 // import test from './common/test';
-
 
 
 
@@ -18,6 +19,8 @@ preloader();
     fullScreen();
     skilsAnimate();
     swipe();
+    parallaxMouse();
+    parallaxScroll();
   // }
 // test('Привет webpack');
 // autorization();

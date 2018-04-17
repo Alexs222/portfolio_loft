@@ -4,8 +4,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    // background:url("./../images/preloader/bg.jpg");
-    background: url('./../images/preloader/mount_preloader.gif') center center no-repeat;
+    background:url("./../images/preloader/bg.jpg");
+    // background: url('./../images/preloader/mount_preloader.gif') center center no-repeat;
     background-size: cover;
     
     z-index: 999;
@@ -19,20 +19,20 @@
 }
 
 .loader {
-    width: 100%;
-    height: auto;
-    // width: 150px;
-    // height: 150px;
-    // border: 5px solid black;
-    // border-top-color: $white;
-    // border-radius: 50%;
+    // width: 100%;
+    // height: auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-top-color: $white;
+    border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 50%;
-    background: url('./../images/preloader/mount_preloader.gif') center center no-repeat;
+    // background: url('./../images/preloader/mount_preloader.gif') center center no-repeat;
     background-size: cover;
     transform: translate(-50%, -50%);
-    // animation: 1s spin infinite linear;
+    animation: 1s spin infinite linear;
 }
 
 .preloader-img {
@@ -41,14 +41,14 @@
     
 }
 
-// @keyframes spin {
-//     from {
-//         transform: translate(-25px, -25px) rotate(0deg);
-//     }
-//     to {
-//         transform: translate(-25px, -25px) rotate(360deg);
-//     }
-// }
+@keyframes spin {
+    from {
+        transform: translate(-25px, -25px) rotate(0deg);
+    }
+    to {
+        transform: translate(-25px, -25px) rotate(360deg);
+    }
+}
 
 #loader_perc {
     position: absolute;
