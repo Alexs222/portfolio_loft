@@ -5,6 +5,7 @@ import swipe from './common/_swipe';
 import preloader from './common/_preloader';
 import parallaxMouse from './common/_parallax_mouse';
 import parallaxScroll from './common/_parallax_scroll';
+import blur from './common/_blur';
 
 // import test from './common/test';
 
@@ -21,6 +22,8 @@ preloader();
     swipe();
     parallaxMouse();
     parallaxScroll();
+    blur();
+
   // }
 // test('Привет webpack');
 // autorization();

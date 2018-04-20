@@ -54,6 +54,10 @@ block content
                                         use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_up")
                 
             section.section.feedback
+                //- .feedback__bg
+                //-     img.feedback__foto(src='assets/images/my-works/feedback_bg.png', alt='fon')
+                    //- img.visuallyhidden(src='assets/images/my-works/feedback_bg.png', alt='fon')
+            
                 //- .feedback-contaner
                 .feedback__header
                     svg.svg-dash
@@ -107,7 +111,7 @@ block content
                 .feedback-form
                     .feedback-form__contaner
                         .connect__blured
-                        .connect__form
+                        .connect__form.visuallyhidden
                             .block__sub-title.connect__title Связаться со мной
                             form#connect-form.connect__form-tag
                                 .connect__input

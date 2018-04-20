@@ -287,9 +287,32 @@
     align-items: center;
     background: url("./../images/my-works/feedback_bg.png") center center no-repeat;
     background-size: cover;
-
-
+    min-width: 900px;
+    // position: relative;
 }
+
+// .feedback__bg {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     z-index: -1;
+//     min-width: 900px;
+
+     
+//     // width: 100%;
+//     // height: 100%;
+// }
+
+// .feedback__foto {
+//     height: auto;
+//     width: 100%;
+//     max-width: 100%;
+//     overflow: hidden;
+//     min-width: 900px;
+    
+// }
 
 // .feedback-contaner{
 //     display: flex;
@@ -412,6 +435,7 @@
 
 .feedback-form__contaner {
     width: rem(380px);
+    height: rem(400px); //временно
     // background-color: $white;
     position: relative;
     border-radius: 6px; 
@@ -420,14 +444,15 @@
 
 .connect__blured {
     position: absolute;
-    background-color: $white;
+    background: url("./../images/my-works/feedback_bg.png") center center no-repeat;
     top: 0;
     left: 0;
-    // filter: blur(14px);
-    z-index: 0;
+    filter: blur(20px);
+    // z-index: 0;
     width: 100%;
     height: 100%;
-    // background-size: 2000px;
+    background-size: 1264px;
+    background-position: (-443px -393px);
 }
 
 .connect__form {
@@ -437,6 +462,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .connect__title {
     margin: rem(30px) auto;
 }
